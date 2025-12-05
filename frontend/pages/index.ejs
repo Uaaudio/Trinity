@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trinity — Tecnologia, Design e Operação</title>
+  <meta name="description" content="Trinity — desenvolvimento web, aplicações e design. Transformamos ideias em produtos digitais." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-mark" aria-hidden="true">△</div>
+        <div class="brand-text">
+          <span class="brand-name">Trinity</span>
+          <small class="brand-tag">Tech & Product</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#services">Serviços</a>
+        <a href="#about">Quem Somos</a>
+        <a href="#contact">Contato</a>
+        <button class="btn btn-ghost" id="btn-cta">Newsletter</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Construindo presença digital forte e escalável.</h1>
+          <p class="lead">
+            Trinity une tecnologia, design e operação para entregar aplicações web elegantes, seguras e com foco em resultados.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Peça uma proposta</a>
+
+            <form id="newsletter-form" class="newsletter-form" aria-label="Inscreva-se na newsletter">
+              <label for="newsletter-email" class="sr-only">E-mail</label>
+              <input id="newsletter-email" name="email" type="email" placeholder="Seu melhor e-mail" required />
+              <button class="btn btn-accent" type="submit">Quero receber</button>
+            </form>
+
+            <p class="micro">Ou fale diretamente com o presidente do clube — temos experiência com projetos institucionais.</p>
+          </div>
+        </div>
+
+        <div class="hero-cards" aria-hidden="true">
+          <div class="pill">Tecnologia</div>
+          <div class="pill">Design</div>
+          <div class="pill">Operação</div>
+
+          <div class="hero-visual">
+            <svg viewBox="0 0 160 100" preserveAspectRatio="xMidYMid meet" class="hero-graphic">
+              <rect x="0" y="0" width="160" height="100" rx="8" fill="rgba(255,255,255,0.03)"></rect>
+              <circle cx="30" cy="30" r="10" fill="var(--accent)"></circle>
+              <rect x="60" y="20" width="60" height="8" rx="3" fill="rgba(255,255,255,0.06)"></rect>
+              <rect x="60" y="36" width="32" height="8" rx="3" fill="rgba(255,255,255,0.04)"></rect>
+              <rect x="60" y="52" width="48" height="8" rx="3" fill="rgba(255,255,255,0.04)"></rect>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>Quem somos</h2>
+        <p class="muted">
+          Somos três profissionais complementares: backend, frontend e design. Juntos transformamos ideias em produtos digitais, do protótipo ao deploy.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Tecnologia</h3>
+            <p>Arquitetura robusta, APIs seguras e performance para escalar sem dor.</p>
+          </article>
+
+          <article class="card">
+            <h3>Design</h3>
+            <p>UI/UX pensado para conversão, com identidade visual clara e consistente.</p>
+          </article>
+
+          <article class="card">
+            <h3>Operação</h3>
+            <p>Processo, testes e deploys confiáveis para entregar valor toda semana.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>O que fazemos</h2>
+        <div class="services-grid">
+          <div class="service">
+            <h4>Desenvolvimento Web</h4>
+            <p>Landing pages, sites institucionais e e-commerce com foco em performance.</p>
+          </div>
+
+          <div class="service">
+            <h4>Aplicações & APIs</h4>
+            <p>Dashboards, integrações e sistemas sob medida para seu fluxo de trabalho.</p>
+          </div>
+
+          <div class="service">
+            <h4>Design & Branding</h4>
+            <p>Identidade visual, protótipos e experiências que convertem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Fale com a Trinity</h2>
+        <p class="muted">Preencha o formulário e retornamos em até 1 dia útil.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="company">Empresa (opcional)</label>
+            <input id="company" name="company" type="text" />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+            <div id="contact-feedback" class="feedback" aria-live="polite"></div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Trinity</strong>
+        <div class="muted">Tech & Product</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#services">Serviços</a>
+        <a href="#about">Quem Somos</a>
+        <a href="#contact">Contato</a>
+      </div>
+
+      <div class="footer-right">
+        <small class="muted">© 2025 Trinity. Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script/script.js"></script>
+</body>
+</html>
