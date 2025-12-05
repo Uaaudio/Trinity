@@ -20,7 +20,7 @@ async function SendEmail(req, res) {
                 <h3>Obrigado ${username}!</h3>
                 <p>Recebemos sua mensagem:</p>
                 <p>${usermessage}</p>
-                <p>Empresa: ${usercompany}</p>
+                <p color:red >Entraremos em contato em até 1 dia útil</p>
             `
         });
 
