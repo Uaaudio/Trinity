@@ -7,11 +7,11 @@ const bodyParser = require("body-parser");
 
 // View engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../frontend/pages'));
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.set('views', path.join(__dirname, './backend','/frontend/pages'));
+app.use(express.static(path.join(__dirname, './backend','/frontend')));
 
 // Rotas
-const EnviarEmail = require("./routes/EnviarEmail");
+const EnviarEmail = require("./backend/routes/EnviarEmail");
 
 // Body parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // Página inicial
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend','/pages', 'index.html'));
+    res.sendFile(path.join(__dirname, './backend','/frontend','/pages', 'index.html'));
 });
 
 //
