@@ -19,8 +19,9 @@ app.use(bodyParser.json());
 
 // Página inicial
 app.get("/", (req, res) => {
-    res.render("index")
+    res.sendFile(path.join(__dirname, '../frontend','/pages', 'index.html'));
 });
+
 //
 // Endpoint de email
 app.use("/MandarEmail", EnviarEmail);
