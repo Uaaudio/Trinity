@@ -1,19 +1,30 @@
-const express = require("express")
+const express = require("express");
 const app = express();
-const PORT  = 3001;
-const ejs = require("ejs")
-const path = require("path")
+const PORT = 3001;
+const ejs = require("ejs");
+const path = require("path");
+const bodyParser = require("body-parser");
 
-app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, '../frontend/pages'))
-app.use(express.static(path.join(__dirname, '../frontend/')))
+// View engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../frontend/pages'));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
+// Rotas
+const EnviarEmail = require("../backend/routes/EnviarEmail");
 
-app.get("/",(req,res)=>{
-    res.render("index")
-})
+// Body parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
+// Página inicial
+app.get("/", (req, res) => {
+    res.render("index");
+});
+//
+// Endpoint de email
+app.use("/MandarEmail", EnviarEmail);
 
-app.listen(PORT,()=>{
-    console.log("Aplicação Rodando na porta"+PORT)
-})  
+app.listen(PORT, () => {
+    console.log("Aplicação rodando na porta " + PORT);
+});

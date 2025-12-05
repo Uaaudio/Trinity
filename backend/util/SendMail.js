@@ -1,17 +1,34 @@
 const nodemailer = require("nodemailer");
 
-function SendMail(){
+const Mailer = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "trinitytechofc@gmail.com",
+        pass: "ezmqppjfwlqxqcgx"
+    }
+});
 
-    const Transporter = nodemailer.createTransport({
-        host:"gmail",
-        secure: false,
-        auth:{
-            user:"trinityttechofc@gmail.com",
-            pass:""
-        }
-    })
+async function SendEmail(req, res) {
+    try {
+        const { username, useremail, usermessage, usercompany } = req.body;
 
+        await Mailer.sendMail({
+            from: '"Trinity Tech Group" <trinitytechofc@gmail.com>',
+            to: useremail,
+            subject: "Obrigado pelo contato!",
+            html: `
+                <h3>Obrigado ${username}!</h3>
+                <p>Recebemos sua mensagem:</p>
+                <p>${usermessage}</p>
+                <p>Empresa: ${usercompany}</p>
+            `
+        });
 
-
-
+        res.redirect("/")
+    } catch (error) {
+        console.error("Erro ao enviar email:", error);
+        res.status(500).send("Erro ao enviar email.");
+    }
 }
+//
+module.exports = SendEmail;
