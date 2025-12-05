@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // Página inicial
 app.get("/", (req, res) => {
-    res.render("index");
+    console.log("Rodou")
 });
 //
 // Endpoint de email
