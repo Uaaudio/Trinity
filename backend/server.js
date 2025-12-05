@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, '../frontend/pages'));
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Rotas
-const EnviarEmail = require("./EnviarEmail");
+const EnviarEmail = require("./routes/EnviarEmail");
 
 // Body parser
 app.use(bodyParser.urlencoded({ extended: false }));
