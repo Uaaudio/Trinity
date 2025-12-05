@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // Página inicial
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+    res.render("index")
 });
 //
 // Endpoint de email
