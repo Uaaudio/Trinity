@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer");
 const Mailer = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "trinitytechofc@gmail.com",
-        pass: "ezmqppjfwlqxqcgx"
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS
     }
 });
 
