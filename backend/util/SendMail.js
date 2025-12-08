@@ -7,7 +7,7 @@ async function SendEmail(req, res) {
         const { username, useremail, usermessage } = req.body;
 
         await resend.emails.send({
-            from: "Trinity Tech Group <onboarding@resend.dev>",
+            from: "Trinity Tech Group <trinitytechofc@gmail.com>",
             to: useremail,
             subject: "Obrigado pelo contato!",
             html: `
